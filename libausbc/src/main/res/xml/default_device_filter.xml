@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<usb>
+	<usb-device class="14" subclass="1" />
+	<usb-device class="14" subclass="2" />
+	<usb-device class="239" subclass="2" /> <usb-device class="14" subclass="3" />
+	<usb-device class="14" subclass="0" />
+</usb>

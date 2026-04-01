@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CaptureTrigger</string>
+    <string name="trigger_accessibility_service_description">Intercetta il tasto hardware della RP2040 e avvia lo scatto.</string>
+</resources>

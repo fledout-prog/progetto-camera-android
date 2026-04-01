@@ -1,0 +1,37 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.jiangdg.ausbc"
+    compileSdk = 35
+
+    defaultConfig {
+        minSdk = 24
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    // Dipendenze Core Android e UI (Risolve gli errori BottomSheet e CoordinatorLayout)
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0") // FONDAMENTALE
+    implementation("androidx.recyclerview:recyclerview:1.3.2")   // FONDAMENTALE
+
+    // Dipendenze Lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+
+    // Collegamento con i moduli fratelli (Risolve gli errori 'natives' e 'LameMp3')
+    api(project(":libuvc"))
+    api(project(":libnative"))
+}

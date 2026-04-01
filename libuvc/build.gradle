@@ -1,0 +1,29 @@
+plugins {
+	id 'com.android.library'
+}
+
+android {
+	namespace 'com.serenegiant.uvc'
+	compileSdk 36
+
+	defaultConfig {
+		minSdk 24
+		targetSdk 36
+	}
+
+	buildFeatures {
+		dataBinding false
+		viewBinding false
+		buildConfig true
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_17
+		targetCompatibility JavaVersion.VERSION_17
+	}
+}
+
+dependencies {
+	implementation 'androidx.annotation:annotation:1.7.1'
+	implementation 'com.elvishew:xlog:1.11.0'
+}
